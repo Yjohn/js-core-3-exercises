@@ -21,5 +21,7 @@ sure it works!
 
 function sum(a, b) {
   var result = a + b;
-  console.log("The sum is " + result);
+  return result;
+  //console.log("The sum is " + result);
 }
+equals(sum(2,2),4);

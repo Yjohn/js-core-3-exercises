@@ -29,12 +29,24 @@ Be sure to follow TDD:
 function findNeedle(haystack) {
   for(var i = 0; i < haystack.length; i++) {
     if(haystack[i] === "needle") {
-      //return i;
+      return i;
       
     }
   }
 }
 
-equals(findNeedle(haystack1)[0], 3);
-equals(findNeedle(haystack2)[1], 5);
-equals(findNeedle(haystack1)[1].length , 5);
+// equals(findNeedle(haystack1)[0], 3);
+// equals(findNeedle(haystack2)[1], 5);
+// equals(findNeedle(haystack1)[1].length , 5);
+
+test('should return the haystack1', function(){
+    expect(findNeedle(haystack1)).toBe(3);
+})
+
+test('should return haystack2', function(){
+    expect(findNeedle(haystack2)).toBe(1);
+})
+
+test('should return haystack3', function(){
+    expect(findNeedle(haystack3)).toBe();
+})
